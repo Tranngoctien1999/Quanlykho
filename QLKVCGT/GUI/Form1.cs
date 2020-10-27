@@ -206,12 +206,6 @@ namespace QLKVCGT
             showFormChild(info);
         }
 
-        private void btnInventory_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Inventory info = new Inventory();
-            showFormChild(info);
-        }
-
         private void btnStatistical_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 

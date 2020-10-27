@@ -132,12 +132,6 @@
     <Compile Include="GUI\Employees_Store.Designer.cs">
       <DependentUpon>Employees_Store.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Inventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Item_Store.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,7 +180,6 @@
     <Compile Include="Models\LOGIN.Designer.cs">
       <DependentUpon>LOGIN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\CustomerMod.cs" />
     <Compile Include="Models\IssueVouDetailMod.cs" />
     <Compile Include="Models\ReceiptVouDetailMod.cs" />
     <Compile Include="Program.cs" />
@@ -212,9 +205,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employees_Store.resx">
       <DependentUpon>Employees_Store.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Item_Store.resx">
       <DependentUpon>Item_Store.cs</DependentUpon>
