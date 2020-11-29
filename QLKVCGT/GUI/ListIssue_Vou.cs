@@ -14,7 +14,7 @@ namespace QLKVCGT.GUI
     public partial class ListIssue_Vou : DevExpress.XtraEditors.XtraForm
     {
         
-        
+        // DevExpress
         public ListIssue_Vou()
         {
             InitializeComponent();
