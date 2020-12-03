@@ -80,6 +80,7 @@ namespace QLKVCGT.GUI
             btnChangePass.Enabled = false;
             btnSave.Enabled = true;
             btnCancel.Enabled=true;
+            btnChangePass.BackColor = Color.Red;
         }
 
         private int ChangeInfo()
