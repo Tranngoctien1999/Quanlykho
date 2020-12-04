@@ -68,6 +68,7 @@ namespace QLKVCGT.GUI
             ChangePass change = new ChangePass();
             change.init(id, pass);
             change.ShowDialog();
+            btnChangePass.BackColor=Color.Red;
         }
 
         private void btnChangeInfo_Click(object sender, EventArgs e)
