@@ -98,6 +98,7 @@ namespace QLKVCGT.GUI
             ReadOnly(false);
             tbID.ReadOnly = true;
             clear();       
+            btnAdd.BackColor=Color.Red;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
