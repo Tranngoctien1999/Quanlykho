@@ -97,7 +97,8 @@ namespace QLKVCGT.GUI
             EnabledBtn(false);
             ReadOnly(false);
             tbID.ReadOnly = true;
-            clear();       
+            clear();      
+            //duy change this 
             btnAdd.BackColor=Color.Red;
         }
 
