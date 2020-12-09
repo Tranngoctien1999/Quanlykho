@@ -108,6 +108,7 @@ namespace QLKVCGT.GUI
                 MessageBox.Show("Thành công!");
             }
             load();
+            btnSave.BackColor=Color.Red;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
