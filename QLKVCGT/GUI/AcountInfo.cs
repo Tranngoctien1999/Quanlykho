@@ -44,6 +44,7 @@ namespace QLKVCGT.GUI
 
             dtpkDateOfBirth.Value= Convert.ToDateTime(dt.Rows[0]["Ngày sinh"].ToString());
             cbbSex.Text = dt.Rows[0]["Giới tính"].ToString();
+            MessageBox.Show("Thành công");
         }
         private void Enable(bool e)
         {
