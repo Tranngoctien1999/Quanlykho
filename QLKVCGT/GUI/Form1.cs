@@ -221,7 +221,13 @@ namespace QLKVCGT
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác minh", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
-                Application.Exit();
+            {
+                LOGIN lg = new LOGIN();
+                lg.Show();
+                this.Hide();
+                    
+            }
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

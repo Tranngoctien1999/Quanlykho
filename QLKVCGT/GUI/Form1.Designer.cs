@@ -54,6 +54,7 @@
             this.rbpHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtmm = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtmm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -65,6 +66,7 @@
             this.ribbonControl1.ExpandCollapseItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
             this.btnLogin,
             this.btnAcountInfo,
             this.btnPrivilege,
@@ -89,7 +91,7 @@
             this.rbpManage,
             this.rbpHelp});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1323, 162);
+            this.ribbonControl1.Size = new System.Drawing.Size(1323, 209);
             // 
             // btnLogin
             // 
@@ -247,15 +249,13 @@
             // 
             this.rbpSystem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgAcount});
-            this.rbpSystem.Image = ((System.Drawing.Image)(resources.GetObject("rbpSystem.Image")));
+            this.rbpSystem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbpSystem.ImageOptions.Image")));
             this.rbpSystem.Name = "rbpSystem";
             this.rbpSystem.Text = "Hệ thống";
             // 
             // rpgAcount
             // 
-            this.rpgAcount.ItemLinks.Add(this.btnLogin);
             this.rpgAcount.ItemLinks.Add(this.btnAcountInfo);
-            this.rpgAcount.ItemLinks.Add(this.btnPrivilege);
             this.rpgAcount.ItemLinks.Add(this.btnLogout);
             this.rpgAcount.Name = "rpgAcount";
             this.rpgAcount.Text = "Tài khoản";
@@ -265,7 +265,7 @@
             this.rbpManage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgEmployees,
             this.rpgStock});
-            this.rbpManage.Image = ((System.Drawing.Image)(resources.GetObject("rbpManage.Image")));
+            this.rbpManage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbpManage.ImageOptions.Image")));
             this.rbpManage.Name = "rbpManage";
             this.rbpManage.Text = "Quản lý";
             // 
@@ -291,7 +291,9 @@
             // 
             // rbpHelp
             // 
-            this.rbpHelp.Image = ((System.Drawing.Image)(resources.GetObject("rbpHelp.Image")));
+            this.rbpHelp.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.rbpHelp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbpHelp.ImageOptions.Image")));
             this.rbpHelp.Name = "rbpHelp";
             this.rbpHelp.Text = "Trợ giúp";
             // 
@@ -303,6 +305,11 @@
             // 
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbonControl1;
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // Form1
             // 
@@ -352,6 +359,7 @@
         private DevExpress.XtraBars.BarButtonItem btnList_ReceiptVou;
         private DevExpress.XtraBars.BarButtonItem btnList_IssueVou;
         private DevExpress.XtraBars.BarButtonItem btnLogout;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }
 
