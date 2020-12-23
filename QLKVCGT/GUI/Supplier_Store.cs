@@ -163,10 +163,5 @@ namespace QLKVCGT.GUI
             EnabledBtn(true);
             Supplier_Store_Load(sender, e);
         }
-
-        private void tbFax_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

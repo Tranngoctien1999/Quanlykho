@@ -19,7 +19,7 @@ namespace QLKVCGT.GUI
             InitializeComponent();
         }
         public void load(string _customerName, string _employeesName,
-                            int _totalPriceBill, DateTime _dateOfBill, int _customerGive, int _employeesGive,string _nguoiNhan, List<IssueVouDetailMod> list)
+                            int _totalPriceBill, DateTime _dateOfBill, int _customerGive, int _employeesGive, List<IssueVouDetailMod> list)
         {
             Bill bill = new Bill();
             foreach(DevExpress.XtraReports.Parameters.Parameter p in bill.Parameters)

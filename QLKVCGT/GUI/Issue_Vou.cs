@@ -113,7 +113,6 @@ namespace QLKVCGT.GUI
                 tbPriceOnceItem.DataBindings.Add("Text", gctBill.DataSource, "price");
                 tbTotalPriceItem.DataBindings.Clear();
                 tbTotalPriceItem.DataBindings.Add("Text", gctBill.DataSource, "totalPrice");
-                tbNguoinhan.DataBindings.Add("Text", gctBill.DataSource, "nguoiNhan");
             }
             catch { }
         }
@@ -259,7 +258,7 @@ namespace QLKVCGT.GUI
             DataTable dt = ItemControl.Instance.DataSource_GetItem();
             foreach (DataRow item in dt.Rows)
             {
-                if (item["Mã"].ToString() != tbItemID.Text) MessageBox.Show("LOL");
+                if (item["Mã"].ToString() == tbItemID.Text) MessageBox.Show("LOL");
                 if ((int)nudNumOfItem.Value > Convert.ToInt32(item["Tồn kho"].ToString()) && item["Mã"].ToString() == tbItemID.Text.Trim(' '))
                 {
                     MessageBox.Show("Không đủ hàng!");
@@ -289,7 +288,7 @@ namespace QLKVCGT.GUI
             InsertBillDetail();
             UpdateBill();
             Print print = new Print();
-            print.load(tbCustomerName.Text, employeesName, Convert.ToInt32(tbTotalPriceBill.Text), DateTime.Now, Convert.ToInt32(tbCustomerGive.Text), Convert.ToInt32(tbEmployeesGive.Text),tbNguoinhan.Text, listBillDetail);
+            print.load(tbCustomerName.Text, employeesName, Convert.ToInt32(tbTotalPriceBill.Text), DateTime.Now, Convert.ToInt32(tbCustomerGive.Text), Convert.ToInt32(tbEmployeesGive.Text), listBillDetail);
             print.ShowDialog();
         }
 
@@ -336,9 +335,9 @@ namespace QLKVCGT.GUI
             string name = tbItemName.Text.Trim(' ');
             int price = Convert.ToInt32(tbPriceOnceItem.Text.Trim(' '));
             int number = (int)nudNumOfItem.Value;
-            string nguoinhan = tbNguoinhan.Text.Trim(' ');
+            
             int totalPriceItem = Convert.ToInt32(tbTotalPriceItem.Text.Trim(' '));
-            IssueVouDetailMod bill = new IssueVouDetailMod(idBill, idItem, name, price, number,nguoinhan);
+            IssueVouDetailMod bill = new IssueVouDetailMod(idBill, idItem, name, price, number);
             foreach (var item in listBillDetail)
             {
                 if (idItem == item.IdItem)
@@ -362,7 +361,7 @@ namespace QLKVCGT.GUI
             dt.Columns.Add("price");
             dt.Columns.Add("numOfItem");
             dt.Columns.Add("totalPriceOfItem");
-            dt.Columns.Add("nguoiNhan");
+           
             foreach (IssueVouDetailMod item in listBillDetail)
             {
                 totalPriceOfBill += item.TotalPriceItem;
@@ -372,7 +371,6 @@ namespace QLKVCGT.GUI
                 row["price"] = item.PriceItem;
                 row["numOfItem"] = item.NumOfItem;
                 row["totalPriceOfItem"] = item.TotalPriceItem;
-                row["nguoiNhan"] = item.NguoiNhan;
                 dt.Rows.Add(row);
             }
             tbTotalPriceBill.Text = totalPriceOfBill.ToString();

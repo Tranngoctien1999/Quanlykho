@@ -42,6 +42,7 @@
             this.btnItem_Store = new DevExpress.XtraBars.BarButtonItem();
             this.btnCustormer_Store = new DevExpress.XtraBars.BarButtonItem();
             this.btnSupplier_Store = new DevExpress.XtraBars.BarButtonItem();
+            this.btnInventory = new DevExpress.XtraBars.BarButtonItem();
             this.btnList_ReceiptVou = new DevExpress.XtraBars.BarButtonItem();
             this.btnList_IssueVou = new DevExpress.XtraBars.BarButtonItem();
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
@@ -50,8 +51,10 @@
             this.rbpManage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgEmployees = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgStock = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtmm = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtmm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -75,6 +78,7 @@
             this.btnItem_Store,
             this.btnCustormer_Store,
             this.btnSupplier_Store,
+            this.btnInventory,
             this.btnList_ReceiptVou,
             this.btnList_IssueVou,
             this.btnLogout});
@@ -84,7 +88,8 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbpSystem,
-            this.rbpManage});
+            this.rbpManage,
+            this.rbpHelp});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.Size = new System.Drawing.Size(1323, 209);
             // 
@@ -132,7 +137,6 @@
             this.btnReceipt_Vou.Caption = "Phiếu nhập";
             this.btnReceipt_Vou.Id = 8;
             this.btnReceipt_Vou.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReceipt_Vou.ImageOptions.Image")));
-            this.btnReceipt_Vou.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnReceipt_Vou.ImageOptions.LargeImage")));
             this.btnReceipt_Vou.Name = "btnReceipt_Vou";
             this.btnReceipt_Vou.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -143,7 +147,6 @@
             this.btnIssue_Vou.Caption = "Phiếu xuất";
             this.btnIssue_Vou.Id = 9;
             this.btnIssue_Vou.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIssue_Vou.ImageOptions.Image")));
-            this.btnIssue_Vou.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnIssue_Vou.ImageOptions.LargeImage")));
             this.btnIssue_Vou.Name = "btnIssue_Vou";
             this.btnIssue_Vou.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -154,7 +157,6 @@
             this.btnItem_Em.Caption = "Danh sách mặt hàng";
             this.btnItem_Em.Id = 10;
             this.btnItem_Em.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItem_Em.ImageOptions.Image")));
-            this.btnItem_Em.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItem_Em.ImageOptions.LargeImage")));
             this.btnItem_Em.Name = "btnItem_Em";
             this.btnItem_Em.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -176,7 +178,6 @@
             this.btnItem_Store.Caption = "Quản lý mặt hàng";
             this.btnItem_Store.Id = 13;
             this.btnItem_Store.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItem_Store.ImageOptions.Image")));
-            this.btnItem_Store.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItem_Store.ImageOptions.LargeImage")));
             this.btnItem_Store.Name = "btnItem_Store";
             this.btnItem_Store.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -203,6 +204,17 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnSupplier_Store.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSupplier_Store_ItemClick);
             // 
+            // btnInventory
+            // 
+            this.btnInventory.Caption = "Tồn kho";
+            this.btnInventory.Id = 16;
+            this.btnInventory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.ImageOptions.Image")));
+            this.btnInventory.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInventory.ImageOptions.LargeImage")));
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnInventory.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInventory_ItemClick);
+            // 
             // btnList_ReceiptVou
             // 
             this.btnList_ReceiptVou.Caption = "Danh sách phiếu nhập";
@@ -228,7 +240,6 @@
             this.btnLogout.Caption = "Đăng xuất";
             this.btnLogout.Id = 27;
             this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.Image")));
-            this.btnLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.LargeImage")));
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -240,7 +251,7 @@
             this.rpgAcount});
             this.rbpSystem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbpSystem.ImageOptions.Image")));
             this.rbpSystem.Name = "rbpSystem";
-            this.rbpSystem.Text = "Tài khoản";
+            this.rbpSystem.Text = "Hệ thống";
             // 
             // rpgAcount
             // 
@@ -272,10 +283,19 @@
             this.rpgStock.ItemLinks.Add(this.btnItem_Store);
             this.rpgStock.ItemLinks.Add(this.btnCustormer_Store);
             this.rpgStock.ItemLinks.Add(this.btnSupplier_Store);
+            this.rpgStock.ItemLinks.Add(this.btnInventory);
             this.rpgStock.ItemLinks.Add(this.btnList_ReceiptVou);
             this.rpgStock.ItemLinks.Add(this.btnList_IssueVou);
             this.rpgStock.Name = "rpgStock";
             this.rpgStock.Text = "Quản lý kho";
+            // 
+            // rbpHelp
+            // 
+            this.rbpHelp.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.rbpHelp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbpHelp.ImageOptions.Image")));
+            this.rbpHelp.Name = "rbpHelp";
+            this.rbpHelp.Text = "Trợ giúp";
             // 
             // xtmm
             // 
@@ -286,11 +306,14 @@
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbonControl1;
             // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
-            this.Appearance.BackColor = System.Drawing.Color.LightBlue;
-            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1323, 685);
             this.Controls.Add(this.ribbonControl1);
@@ -298,7 +321,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl1;
-            this.Text = "Quản lý kho";
+            this.Text = "Phần mềm quản lý";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -316,6 +339,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage rbpSystem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAcount;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbpManage;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbpHelp;
         private DevExpress.XtraBars.BarButtonItem btnLogin;
         private DevExpress.XtraBars.BarButtonItem btnAcountInfo;
         private DevExpress.XtraBars.BarButtonItem btnPrivilege;
@@ -327,6 +351,7 @@
         private DevExpress.XtraBars.BarButtonItem btnItem_Store;
         private DevExpress.XtraBars.BarButtonItem btnCustormer_Store;
         private DevExpress.XtraBars.BarButtonItem btnSupplier_Store;
+        private DevExpress.XtraBars.BarButtonItem btnInventory;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgEmployees;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgStock;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtmm;
@@ -334,6 +359,7 @@
         private DevExpress.XtraBars.BarButtonItem btnList_ReceiptVou;
         private DevExpress.XtraBars.BarButtonItem btnList_IssueVou;
         private DevExpress.XtraBars.BarButtonItem btnLogout;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }
 

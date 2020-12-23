@@ -15,7 +15,6 @@ namespace QLKVCGT.Models
         private int totalPriceItem;
         private int priceItem;
         private string itemName;
-        private string nguoiNhan;
 
         public int IdItem
         {
@@ -94,17 +93,7 @@ namespace QLKVCGT.Models
                 itemName = value;
             }
         }
-        public string NguoiNhan
-        {
-            get
-            {
-                return nguoiNhan;
-            }
-            set
-            {
-                nguoiNhan = value;
-            }
-        }
+
         public IssueVouDetailMod(int _idBill, int _idItem, int _price, int _numOfItem)
         {
             idBill = _idBill;
@@ -115,14 +104,13 @@ namespace QLKVCGT.Models
             totalPriceItem = (int)(float)(priceItem * numOfItem);
         }
 
-        public IssueVouDetailMod(int _idBill, int _idItem, string _itemName, int _price, int _numOfItem, string _nguoiNhan)
+        public IssueVouDetailMod(int _idBill, int _idItem, string _itemName, int _price, int _numOfItem)
         {
             IdItem = _idItem;
             IdBill = _idBill;
             itemName = _itemName;
             priceItem = _price;
             numOfItem = _numOfItem;
-            nguoiNhan = _nguoiNhan;
             totalPriceItem = (int)(float)(priceItem * numOfItem);
         }
 
