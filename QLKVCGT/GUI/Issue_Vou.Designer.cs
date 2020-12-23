@@ -52,7 +52,6 @@
             this.NumOfItem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TotalPriceOfItem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.itemId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NguoiNhan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.nudNumOfItem = new System.Windows.Forms.NumericUpDown();
@@ -72,8 +71,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.tbNguoinhan = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbCustomerName = new System.Windows.Forms.TextBox();
@@ -81,6 +78,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelCustomer = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddCustomer = new DevExpress.XtraEditors.SimpleButton();
+            this.tbNguoinhan = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.NguoiNhan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -209,7 +209,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(197, 25);
             this.label13.TabIndex = 67;
-            this.label13.Text = "Thành tiền:";
+            this.label13.Text = "Tổng tiền cần thanh toán:";
             // 
             // tbTotalPriceBill
             // 
@@ -345,16 +345,6 @@
             this.itemId.Visible = true;
             this.itemId.VisibleIndex = 0;
             this.itemId.Width = 113;
-            // 
-            // NguoiNhan
-            // 
-            this.NguoiNhan.Caption = "Tên người nhận";
-            this.NguoiNhan.FieldName = "nguoiNhan";
-            this.NguoiNhan.MinWidth = 25;
-            this.NguoiNhan.Name = "NguoiNhan";
-            this.NguoiNhan.Visible = true;
-            this.NguoiNhan.VisibleIndex = 5;
-            this.NguoiNhan.Width = 94;
             // 
             // panel3
             // 
@@ -594,24 +584,6 @@
             this.panel9.Size = new System.Drawing.Size(685, 203);
             this.panel9.TabIndex = 65;
             // 
-            // tbNguoinhan
-            // 
-            this.tbNguoinhan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNguoinhan.Location = new System.Drawing.Point(338, 87);
-            this.tbNguoinhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbNguoinhan.Name = "tbNguoinhan";
-            this.tbNguoinhan.Size = new System.Drawing.Size(185, 27);
-            this.tbNguoinhan.TabIndex = 60;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(181, 90);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 26);
-            this.label10.TabIndex = 61;
-            this.label10.Text = "Tên người nhận:*";
-            // 
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -688,13 +660,41 @@
             this.btnAddCustomer.Text = "Chọn";
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
+            // tbNguoinhan
+            // 
+            this.tbNguoinhan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNguoinhan.Location = new System.Drawing.Point(338, 87);
+            this.tbNguoinhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbNguoinhan.Name = "tbNguoinhan";
+            this.tbNguoinhan.Size = new System.Drawing.Size(185, 27);
+            this.tbNguoinhan.TabIndex = 60;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(181, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 26);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "Tên người nhận:*";
+            // 
+            // NguoiNhan
+            // 
+            this.NguoiNhan.Caption = "Tên người nhận";
+            this.NguoiNhan.FieldName = "nguoiNhan";
+            this.NguoiNhan.MinWidth = 25;
+            this.NguoiNhan.Name = "NguoiNhan";
+            this.NguoiNhan.Visible = true;
+            this.NguoiNhan.VisibleIndex = 5;
+            this.NguoiNhan.Width = 94;
+            // 
             // Issue_Vou
             // 
             this.Appearance.BackColor = System.Drawing.Color.LightBlue;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1598, 776);
+            this.ClientSize = new System.Drawing.Size(1598, 910);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Issue_Vou";

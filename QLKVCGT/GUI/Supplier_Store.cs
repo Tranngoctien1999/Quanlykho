@@ -145,6 +145,7 @@ namespace QLKVCGT.GUI
             catch
             {
                 MessageBox.Show("Vui lòng kiểm tra lại thông tin mặt hàng nhập vào!");
+
             }
 
             if (action == 1)//add
