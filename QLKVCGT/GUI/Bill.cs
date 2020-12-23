@@ -17,7 +17,7 @@ namespace QLKVCGT.GUI
 
 
         public void InitData( string _customerName, string _employeesName, 
-                            int _totalPriceBill, DateTime _dateOfBill, int _customerGive, int _employeesGive, List<IssueVouDetailMod> list)
+                            int _totalPriceBill, DateTime _dateOfBill, int _customerGive, int _employeesGive,string _nguoiNhan, List<IssueVouDetailMod> list)
         {
             CustomerGive.Value = _customerGive;
             EmployeesGive.Value = _employeesGive;
@@ -25,6 +25,7 @@ namespace QLKVCGT.GUI
             EmployeesName.Value = _employeesName;
             TotalPriceBill.Value = _totalPriceBill;
             DateOfBill.Value = _dateOfBill;
+            NguoiNhan.Value = _nguoiNhan;
             objectDataSource1.DataSource = list;
         }
 

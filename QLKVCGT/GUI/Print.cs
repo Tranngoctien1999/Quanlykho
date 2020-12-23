@@ -26,7 +26,7 @@ namespace QLKVCGT.GUI
             {
                 p.Visible = false;
             }
-            bill.InitData(_customerName, _employeesName, _totalPriceBill, _dateOfBill, _customerGive, _employeesGive, list);
+            bill.InitData(_customerName, _employeesName, _totalPriceBill, _dateOfBill, _customerGive, _employeesGive,_nguoiNhan, list);
             documentView.DocumentSource = bill;
             bill.CreateDocument();
         }

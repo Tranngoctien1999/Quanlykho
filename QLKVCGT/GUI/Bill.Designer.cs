@@ -50,33 +50,34 @@
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.IbNguoiNhan = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbEmployeesName = new DevExpress.XtraReports.UI.XRLabel();
-            this.EmployeesName = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbCustomerName = new DevExpress.XtraReports.UI.XRLabel();
-            this.CustomerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.lbBillDate = new DevExpress.XtraReports.UI.XRLabel();
-            this.DateOfBill = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbBillID = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.EmployeesName = new DevExpress.XtraReports.Parameters.Parameter();
+            this.CustomerName = new DevExpress.XtraReports.Parameters.Parameter();
+            this.DateOfBill = new DevExpress.XtraReports.Parameters.Parameter();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrPanel4 = new DevExpress.XtraReports.UI.XRPanel();
             this.lbEmployeesGive = new DevExpress.XtraReports.UI.XRLabel();
-            this.EmployeesGive = new DevExpress.XtraReports.Parameters.Parameter();
             this.lbCustomerGive = new DevExpress.XtraReports.UI.XRLabel();
-            this.CustomerGive = new DevExpress.XtraReports.Parameters.Parameter();
             this.lbTotalPrice = new DevExpress.XtraReports.UI.XRLabel();
-            this.TotalPriceBill = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.EmployeesGive = new DevExpress.XtraReports.Parameters.Parameter();
+            this.CustomerGive = new DevExpress.XtraReports.Parameters.Parameter();
+            this.TotalPriceBill = new DevExpress.XtraReports.Parameters.Parameter();
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
-            this.IbNguoiNhan = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.NguoiNhan = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
@@ -87,7 +88,7 @@
             this.CHITIET.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
             this.CHITIET.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHITIET.HeightF = 24.99997F;
+            this.CHITIET.HeightF = 28.99999F;
             this.CHITIET.Name = "CHITIET";
             this.CHITIET.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.CHITIET.StylePriority.UseFont = false;
@@ -167,7 +168,7 @@
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1,
             this.xrPanel1});
-            this.TopMargin.HeightF = 366F;
+            this.TopMargin.HeightF = 371F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.StylePriority.UseTextAlignment = false;
@@ -258,6 +259,26 @@
             this.xrPanel3.Name = "xrPanel3";
             this.xrPanel3.SizeF = new System.Drawing.SizeF(365.8333F, 119F);
             // 
+            // IbNguoiNhan
+            // 
+            this.IbNguoiNhan.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NguoiNhan]\r\n")});
+            this.IbNguoiNhan.LocationFloat = new DevExpress.Utils.PointFloat(130.8333F, 86.50002F);
+            this.IbNguoiNhan.Multiline = true;
+            this.IbNguoiNhan.Name = "IbNguoiNhan";
+            this.IbNguoiNhan.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.IbNguoiNhan.SizeF = new System.Drawing.SizeF(235F, 23.00003F);
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 86.50002F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(113.3333F, 22.50003F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.Text = "Tên người nhận:";
+            // 
             // lbEmployeesName
             // 
             this.lbEmployeesName.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -266,13 +287,6 @@
             this.lbEmployeesName.Name = "lbEmployeesName";
             this.lbEmployeesName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lbEmployeesName.SizeF = new System.Drawing.SizeF(235F, 23.00003F);
-            // 
-            // EmployeesName
-            // 
-            this.EmployeesName.Description = "Parameter1";
-            this.EmployeesName.Name = "EmployeesName";
-            this.EmployeesName.Type = typeof(int);
-            this.EmployeesName.ValueInfo = "0";
             // 
             // xrLabel7
             // 
@@ -292,11 +306,6 @@
             this.lbCustomerName.Name = "lbCustomerName";
             this.lbCustomerName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lbCustomerName.SizeF = new System.Drawing.SizeF(235F, 23F);
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.Description = "Parameter1";
-            this.CustomerName.Name = "CustomerName";
             // 
             // xrLabel9
             // 
@@ -329,13 +338,6 @@
             this.lbBillDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lbBillDate.SizeF = new System.Drawing.SizeF(225.0001F, 22.99998F);
             this.lbBillDate.StylePriority.UseFont = false;
-            // 
-            // DateOfBill
-            // 
-            this.DateOfBill.Description = "Parameter1";
-            this.DateOfBill.Name = "DateOfBill";
-            this.DateOfBill.Type = typeof(int);
-            this.DateOfBill.ValueInfo = "0";
             // 
             // xrLabel6
             // 
@@ -382,6 +384,25 @@
             this.xrLabel3.Text = "HÓA ĐƠN XUẤT KHO";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
+            // EmployeesName
+            // 
+            this.EmployeesName.Description = "Parameter1";
+            this.EmployeesName.Name = "EmployeesName";
+            this.EmployeesName.Type = typeof(int);
+            this.EmployeesName.ValueInfo = "0";
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.Description = "Parameter1";
+            this.CustomerName.Name = "CustomerName";
+            // 
+            // DateOfBill
+            // 
+            this.DateOfBill.Description = "Parameter1";
+            this.DateOfBill.Name = "DateOfBill";
+            this.DateOfBill.Type = typeof(int);
+            this.DateOfBill.ValueInfo = "0";
+            // 
             // BottomMargin
             // 
             this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -415,13 +436,6 @@
             this.lbEmployeesGive.SizeF = new System.Drawing.SizeF(130.8333F, 21.16666F);
             this.lbEmployeesGive.StylePriority.UseFont = false;
             // 
-            // EmployeesGive
-            // 
-            this.EmployeesGive.Description = "Parameter1";
-            this.EmployeesGive.Name = "EmployeesGive";
-            this.EmployeesGive.Type = typeof(int);
-            this.EmployeesGive.ValueInfo = "0";
-            // 
             // lbCustomerGive
             // 
             this.lbCustomerGive.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -433,13 +447,6 @@
             this.lbCustomerGive.SizeF = new System.Drawing.SizeF(130.8333F, 21.16666F);
             this.lbCustomerGive.StylePriority.UseFont = false;
             // 
-            // CustomerGive
-            // 
-            this.CustomerGive.Description = "Parameter1";
-            this.CustomerGive.Name = "CustomerGive";
-            this.CustomerGive.Type = typeof(int);
-            this.CustomerGive.ValueInfo = "0";
-            // 
             // lbTotalPrice
             // 
             this.lbTotalPrice.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -450,13 +457,6 @@
             this.lbTotalPrice.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lbTotalPrice.SizeF = new System.Drawing.SizeF(130.8333F, 21.16666F);
             this.lbTotalPrice.StylePriority.UseFont = false;
-            // 
-            // TotalPriceBill
-            // 
-            this.TotalPriceBill.Description = "Parameter1";
-            this.TotalPriceBill.Name = "TotalPriceBill";
-            this.TotalPriceBill.Type = typeof(int);
-            this.TotalPriceBill.ValueInfo = "0";
             // 
             // xrLabel10
             // 
@@ -488,29 +488,36 @@
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.Text = "Tổng tiền thanh toán:";
             // 
+            // EmployeesGive
+            // 
+            this.EmployeesGive.Description = "Parameter1";
+            this.EmployeesGive.Name = "EmployeesGive";
+            this.EmployeesGive.Type = typeof(int);
+            this.EmployeesGive.ValueInfo = "0";
+            // 
+            // CustomerGive
+            // 
+            this.CustomerGive.Description = "Parameter1";
+            this.CustomerGive.Name = "CustomerGive";
+            this.CustomerGive.Type = typeof(int);
+            this.CustomerGive.ValueInfo = "0";
+            // 
+            // TotalPriceBill
+            // 
+            this.TotalPriceBill.Description = "Parameter1";
+            this.TotalPriceBill.Name = "TotalPriceBill";
+            this.TotalPriceBill.Type = typeof(int);
+            this.TotalPriceBill.ValueInfo = "0";
+            // 
             // objectDataSource1
             // 
             this.objectDataSource1.DataSourceType = null;
             this.objectDataSource1.Name = "objectDataSource1";
             // 
-            // IbNguoiNhan
+            // NguoiNhan
             // 
-            this.IbNguoiNhan.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?EmployeesName")});
-            this.IbNguoiNhan.LocationFloat = new DevExpress.Utils.PointFloat(130.8333F, 86.50002F);
-            this.IbNguoiNhan.Name = "IbNguoiNhan";
-            this.IbNguoiNhan.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.IbNguoiNhan.SizeF = new System.Drawing.SizeF(235F, 23.00003F);
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 86.50002F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(113.3333F, 22.50003F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.Text = "Tên người nhận:";
+            this.NguoiNhan.Description = "Parameter1";
+            this.NguoiNhan.Name = "NguoiNhan";
             // 
             // Bill
             // 
@@ -521,7 +528,7 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.objectDataSource1});
             this.DataSource = this.objectDataSource1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 366, 128);
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 371, 128);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
@@ -531,7 +538,8 @@
             this.EmployeesGive,
             this.CustomerName,
             this.EmployeesName,
-            this.DateOfBill});
+            this.DateOfBill,
+            this.NguoiNhan});
             this.Version = "20.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
@@ -589,5 +597,6 @@
         private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource1;
         private DevExpress.XtraReports.UI.XRLabel IbNguoiNhan;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.Parameters.Parameter NguoiNhan;
     }
 }

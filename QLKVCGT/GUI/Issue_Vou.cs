@@ -259,7 +259,7 @@ namespace QLKVCGT.GUI
             DataTable dt = ItemControl.Instance.DataSource_GetItem();
             foreach (DataRow item in dt.Rows)
             {
-                if (item["Mã"].ToString() != tbItemID.Text) MessageBox.Show("LOL");
+                if (item["Mã"].ToString() != tbItemID.Text) 
                 if ((int)nudNumOfItem.Value > Convert.ToInt32(item["Tồn kho"].ToString()) && item["Mã"].ToString() == tbItemID.Text.Trim(' '))
                 {
                     MessageBox.Show("Không đủ hàng!");
@@ -385,7 +385,7 @@ namespace QLKVCGT.GUI
         {
             try
             {
-                IssueVouControl.Instance.InsertBill(employeesId, tbCustomerID.Text.Trim(' '), 0);
+                IssueVouControl.Instance.InsertBill(employeesId, tbCustomerID.Text.Trim(' '), 0, tbNguoinhan.Text.Trim(' '));
             }
             catch
             {
