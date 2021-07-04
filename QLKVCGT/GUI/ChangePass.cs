@@ -34,7 +34,7 @@ namespace QLKVCGT.GUI
             string rePass = tbRePass.Text.Trim(' ');
             if(rePass!=newPass || rePass=="" || newPass=="")
             {
-                MessageBox.Show("Mật khẩu mới không trùng nhau hoặc không hợp lệ!");
+                MessageBox.Show("Mật khẩu không trùng nhau hoặc không đúng!");
                 return;
             }
             if(_oldPass!=oldPass)
